@@ -1,0 +1,75 @@
+.email {
+  width: 290px;
+  height: 30px;
+  border-bottom: 1px;
+  border-style: hidden;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(199, 199, 199);
+}
+
+.form {
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 30px;
+  display: flex-box;
+  width: 400px;
+  height: 550px;
+  background-color: white;
+  /* border: 3px solid green; */
+  border-radius: 15px;
+}
+
+.form h1 {
+  margin: auto;
+  padding-bottom: 20px;
+  width: 100px;
+  /* border: 3px solid green; */
+}
+
+.form-input {
+  margin: auto;
+  width: 300px;
+  /* border: 3px solid green; */
+}
+
+.password {
+  width: 290px;
+  height: 30px;
+  border-bottom: 1px;
+  border-style: hidden;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(199, 199, 199);
+}
+
+.submit {
+  margin-top: 35px;
+  margin-bottom: 25px;
+  border-radius: 20px;
+  border-style: hidden;
+  width: 294px;
+  height: 40px;
+  color: white;
+  font-weight: bold;
+  background-image: linear-gradient(
+    to right,
+    rgb(16, 125, 250),
+    rgb(223, 71, 223)
+  );
+  /* border: 3px solid green; */
+}
+
+.register {
+  margin-left: 100px;
+  border-radius: 20px;
+  border-style: hidden;
+  width: 100px;
+  height: 40px;
+  color: white;
+  font-weight: bold;
+  background-image: linear-gradient(
+    to right,
+    rgb(16, 125, 250),
+    rgb(223, 71, 223)
+  );
+}
