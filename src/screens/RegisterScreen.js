@@ -5,7 +5,7 @@ import { ToastContainer, toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 
-const LoginForm = () => {
+const RegisterForm = () => {
   const { register, handleSubmit } = useForm();
   let email = "";
   let password = "";
@@ -21,7 +21,7 @@ const LoginForm = () => {
   });
 
   const redirect = () => {
-    navigate("/register");
+    navigate("/");
   };
 
   const notify = (message) => {
@@ -32,17 +32,17 @@ const LoginForm = () => {
     let myArray = Object.values(result);
     email = myArray[0];
     password = myArray[1];
-    const BASE_URL = process.env.REACT_APP_API_URL + "login";
+    const BASE_URL = process.env.REACT_APP_API_URL + "register";
 
     try {
-      fetch(BASE_URL, {
-        method: "GET",
+      const data = { email: email, password: password };
+      fetch("http://localhost:3001/register", {
+        method: "POST",
         headers: {
           "Access-Control-Allow-Origin": "*",
-          "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
-          email: email,
-          password: password,
+          "Content-Type": "application/json",
         },
+        body: JSON.stringify({ email: email, password: password }),
       })
         .then((res) => {
           return res.json();
@@ -63,7 +63,7 @@ const LoginForm = () => {
 
   return (
     <div className="form">
-      <h1>Sign In</h1>
+      <h1>Sign Up</h1>
       <div className="form-input">
         <form onSubmit={handleSubmit(onSubmit)}>
           <p>Email</p>
@@ -79,18 +79,17 @@ const LoginForm = () => {
             placeholder="Type your password"
             {...register("password", { required: true })}
           />
-          <input className="submit" type="submit" value="Sign In" />
+          <input className="submit" type="submit" value="Create New Account" />
         </form>
-        <p className="question">Don't have an account ?</p>
         <input
           className="register"
           type="button"
           onClick={redirect}
-          value="Sign Up"
+          value="Back"
         />
       </div>
       <ToastContainer theme="light" position="bottom-center" />
     </div>
   );
 };
-export default LoginForm;
+export default RegisterForm;

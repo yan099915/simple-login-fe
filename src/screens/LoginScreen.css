@@ -23,8 +23,8 @@
 .form h1 {
   margin: auto;
   padding-bottom: 20px;
-  width: 100px;
-  /* border: 3px solid green; */
+  width: 120px;
+  border: 3px solid green;
 }
 
 .form-input {
@@ -40,6 +40,38 @@
   border-style: hidden;
   border-bottom-style: solid;
   border-bottom-color: rgb(199, 199, 199);
+}
+
+.question {
+  margin-left: 65px;
+  margin-bottom: 15px;
+}
+
+.register {
+  margin-left: 100px;
+  border-radius: 20px;
+  border-style: hidden;
+  width: 100px;
+  height: 40px;
+  color: white;
+  font-weight: bold;
+  background-image: linear-gradient(
+    to right,
+    rgb(16, 125, 250),
+    rgb(223, 71, 223)
+  );
+}
+
+.register:hover {
+  background-image: linear-gradient(
+    to right,
+    rgb(13, 118, 238),
+    rgb(209, 66, 209)
+  );
+}
+.register:active {
+  transform: scale(0.98);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
 
 .submit {
@@ -58,18 +90,14 @@
   );
   /* border: 3px solid green; */
 }
-
-.register {
-  margin-left: 100px;
-  border-radius: 20px;
-  border-style: hidden;
-  width: 100px;
-  height: 40px;
-  color: white;
-  font-weight: bold;
+.submit:hover {
   background-image: linear-gradient(
     to right,
-    rgb(16, 125, 250),
-    rgb(223, 71, 223)
+    rgb(13, 118, 238),
+    rgb(209, 66, 209)
   );
+}
+.submit:active {
+  transform: scale(0.98);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
 }
