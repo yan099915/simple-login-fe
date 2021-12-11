@@ -13,7 +13,6 @@ function App() {
   return (
     <Router>
       <main className="App">
-        <Navbar />
         <Routes>
           <Route exact path="/" element={<LoginScreen />} />
           <Route exact path="/register" element={<RegisterScreen />} />

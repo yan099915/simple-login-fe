@@ -8,11 +8,7 @@
 }
 
 .form {
-  margin-top: 100px;
-  margin-left: auto;
-  margin-right: auto;
   padding-top: 30px;
-  display: flex-box;
   width: 400px;
   height: 550px;
   background-color: white;
