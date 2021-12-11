@@ -36,7 +36,7 @@ const RegisterForm = () => {
 
     try {
       const data = { email: email, password: password };
-      fetch("http://localhost:3001/register", {
+      fetch(BASE_URL, {
         method: "POST",
         headers: {
           "Access-Control-Allow-Origin": "*",
